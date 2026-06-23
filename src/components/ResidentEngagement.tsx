@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { 
   Users, 
   HelpCircle, 
-  Gift, 
+  Gift,
   Car, 
   HeartHandshake, 
   Plus, 
