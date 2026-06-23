@@ -474,7 +474,7 @@ export default function App() {
             {/* User Dropdown Selector */}
             <div className="space-y-2">
               <select 
-                className="w-full bg-indigo-900 text-xs text-white border border-indigo-750 p-2.5 rounded-xl outline-none font-bold cursor-pointer"
+                className="w-full bg-indigo-900 text-xs text-white border border-indigo-700 p-2.5 rounded-xl outline-none font-bold cursor-pointer"
                 value={activeUser?.id || ''}
                 onChange={(e) => {
                   const selectedId = e.target.value;
@@ -498,7 +498,7 @@ export default function App() {
                 className={`w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs font-bold transition-all ${
                   isOfficialMode 
                     ? 'bg-amber-400 text-indigo-950 shadow-md shadow-amber-400/20' 
-                    : 'bg-indigo-800/80 text-indigo-200 hover:bg-indigo-850'
+                    : 'bg-indigo-800/80 text-indigo-200 hover:bg-indigo-900'
                 }`}
               >
                 <span className="flex items-center gap-1.5">
@@ -511,7 +511,7 @@ export default function App() {
 
             {/* Simulated Active Stats / Progress Level indicator */}
             {!isOfficialMode && activeUser && (
-              <div className="mt-3 pt-3 border-t border-indigo-850/40">
+              <div className="mt-3 pt-3 border-t border-indigo-900/40">
                 <div className="flex justify-between text-xs mb-1">
                   <span className="text-indigo-200">Active Level</span>
                   <span className="text-amber-300 font-bold font-mono">Lvl {Math.floor(activeUser.points / 100) + 1}</span>
@@ -527,7 +527,7 @@ export default function App() {
             )}
 
             {isOfficialMode && (
-              <div className="mt-3 pt-3 border-t border-indigo-850/40 text-[11px] text-amber-200 flex items-start gap-1.5">
+              <div className="mt-3 pt-3 border-t border-indigo-900/40 text-[11px] text-amber-200 flex items-start gap-1.5">
                 <Info className="w-3.5 h-3.5 text-amber-300 shrink-0 mt-0.5" />
                 <span>You can now approve requests, transition issue statuses, and trigger rapid field dispatches.</span>
               </div>
@@ -543,7 +543,7 @@ export default function App() {
               className={`w-full flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-bold tracking-tight transition-all text-left ${
                 activeTab === 'dashboard'
                   ? 'bg-amber-400 text-indigo-950 font-black shadow-lg'
-                  : 'text-indigo-200 hover:bg-indigo-850/60'
+                  : 'text-indigo-200 hover:bg-indigo-900/60'
               }`}
             >
               <Activity className="w-3.5 h-3.5 shrink-0" />
@@ -555,7 +555,7 @@ export default function App() {
               className={`w-full flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-bold tracking-tight transition-all text-left ${
                 activeTab === 'reports_feed'
                   ? 'bg-amber-400 text-indigo-950 font-black shadow-lg'
-                  : 'text-indigo-200 hover:bg-indigo-850/60'
+                  : 'text-indigo-200 hover:bg-indigo-900/60'
               }`}
             >
               <Compass className="w-3.5 h-3.5 shrink-0" />
@@ -572,7 +572,7 @@ export default function App() {
               className={`w-full flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-bold tracking-tight transition-all text-left ${
                 activeTab === 'predictive'
                   ? 'bg-amber-400 text-indigo-950 font-black shadow-lg'
-                  : 'text-indigo-200 hover:bg-indigo-850/60'
+                  : 'text-indigo-200 hover:bg-indigo-900/60'
               }`}
             >
               <Sparkles className="w-3.5 h-3.5 shrink-0" />
@@ -585,7 +585,7 @@ export default function App() {
             <button 
               onClick={() => { setActiveTab('ai_ops'); setIsMobileSidebarOpen(false); }}
               className={`w-full flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-bold tracking-tight transition-all text-left ${
-                activeTab === 'ai_ops' ? 'bg-amber-400 text-indigo-950 font-black shadow-lg' : 'text-indigo-200 hover:bg-indigo-850/60'
+                activeTab === 'ai_ops' ? 'bg-amber-400 text-indigo-950 font-black shadow-lg' : 'text-indigo-200 hover:bg-indigo-900/60'
               }`}
             >
               <Activity className="w-3.5 h-3.5 shrink-0 text-amber-300" />
@@ -596,7 +596,7 @@ export default function App() {
             <button 
               onClick={() => { setActiveTab('small_societies'); setIsMobileSidebarOpen(false); }}
               className={`w-full flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-bold tracking-tight transition-all text-left ${
-                activeTab === 'small_societies' ? 'bg-amber-400 text-indigo-950 font-black shadow-lg' : 'text-indigo-200 hover:bg-indigo-850/60'
+                activeTab === 'small_societies' ? 'bg-amber-400 text-indigo-950 font-black shadow-lg' : 'text-indigo-200 hover:bg-indigo-900/60'
               }`}
             >
               <Sliders className="w-3.5 h-3.5 shrink-0 text-amber-300" />
@@ -607,7 +607,7 @@ export default function App() {
             <button 
               onClick={() => { setActiveTab('vendors'); setIsMobileSidebarOpen(false); }}
               className={`w-full flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-bold tracking-tight transition-all text-left ${
-                activeTab === 'vendors' ? 'bg-amber-400 text-indigo-950 font-black shadow-lg' : 'text-indigo-200 hover:bg-indigo-850/60'
+                activeTab === 'vendors' ? 'bg-amber-400 text-indigo-950 font-black shadow-lg' : 'text-indigo-200 hover:bg-indigo-900/60'
               }`}
             >
               <Sliders className="w-3.5 h-3.5 shrink-0 text-amber-300" />
@@ -618,7 +618,7 @@ export default function App() {
             <button 
               onClick={() => { setActiveTab('finances'); setIsMobileSidebarOpen(false); }}
               className={`w-full flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-bold tracking-tight transition-all text-left ${
-                activeTab === 'finances' ? 'bg-amber-400 text-indigo-950 font-black shadow-lg' : 'text-indigo-200 hover:bg-indigo-850/60'
+                activeTab === 'finances' ? 'bg-amber-400 text-indigo-950 font-black shadow-lg' : 'text-indigo-200 hover:bg-indigo-900/60'
               }`}
             >
               <TrendingUp className="w-3.5 h-3.5 shrink-0 text-amber-300" />
@@ -629,7 +629,7 @@ export default function App() {
             <button 
               onClick={() => { setActiveTab('bot_assistant'); setIsMobileSidebarOpen(false); }}
               className={`w-full flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-bold tracking-tight transition-all text-left ${
-                activeTab === 'bot_assistant' ? 'bg-amber-400 text-indigo-950 font-black shadow-lg' : 'text-indigo-200 hover:bg-indigo-850/60'
+                activeTab === 'bot_assistant' ? 'bg-amber-400 text-indigo-950 font-black shadow-lg' : 'text-indigo-200 hover:bg-indigo-900/60'
               }`}
             >
               <MessageSquare className="w-3.5 h-3.5 shrink-0 text-amber-300" />
@@ -640,7 +640,7 @@ export default function App() {
             <button 
               onClick={() => { setActiveTab('residents'); setIsMobileSidebarOpen(false); }}
               className={`w-full flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-bold tracking-tight transition-all text-left ${
-                activeTab === 'residents' ? 'bg-amber-400 text-indigo-950 font-black shadow-lg' : 'text-indigo-200 hover:bg-indigo-850/60'
+                activeTab === 'residents' ? 'bg-amber-400 text-indigo-950 font-black shadow-lg' : 'text-indigo-200 hover:bg-indigo-900/60'
               }`}
             >
               <Users className="w-3.5 h-3.5 shrink-0 text-amber-300" />
@@ -651,7 +651,7 @@ export default function App() {
             <button 
               onClick={() => { setActiveTab('remote_owners'); setIsMobileSidebarOpen(false); }}
               className={`w-full flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-bold tracking-tight transition-all text-left ${
-                activeTab === 'remote_owners' ? 'bg-amber-400 text-indigo-950 font-black shadow-lg' : 'text-indigo-200 hover:bg-indigo-850/60'
+                activeTab === 'remote_owners' ? 'bg-amber-400 text-indigo-950 font-black shadow-lg' : 'text-indigo-200 hover:bg-indigo-900/60'
               }`}
             >
               <Sliders className="w-3.5 h-3.5 shrink-0 text-amber-300" />
@@ -663,7 +663,7 @@ export default function App() {
               className={`w-full flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-bold tracking-tight transition-all text-left ${
                 activeTab === 'leaderboard'
                   ? 'bg-amber-400 text-indigo-950 font-black shadow-lg'
-                  : 'text-indigo-200 hover:bg-indigo-850/60'
+                  : 'text-indigo-200 hover:bg-indigo-900/60'
               }`}
             >
               <Award className="w-3.5 h-3.5 shrink-0" />
@@ -673,7 +673,7 @@ export default function App() {
         </div>
 
         {/* Footer info displaying platform credentials */}
-        <div className="pt-4 border-t border-indigo-850/65 text-indigo-300 space-y-1">
+        <div className="pt-4 border-t border-indigo-900/65 text-indigo-300 space-y-1">
           <div className="flex items-center gap-2">
             <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></div>
             <span className="text-[10px] font-semibold text-indigo-150 uppercase tracking-wider">SF Metro Service Active</span>
@@ -942,7 +942,7 @@ export default function App() {
                           </div>
 
                           {/* Float visual tooltip overlay */}
-                          <div className={`absolute bottom-full left-1/2 -translate-x-1/2 mb-1.5 bg-slate-900 border border-slate-750 text-white rounded-xl px-2.5 py-1 whitespace-nowrap text-[10px] font-bold shadow-2xl opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity ${isSelected ? 'opacity-100 z-20' : ''}`}>
+                          <div className={`absolute bottom-full left-1/2 -translate-x-1/2 mb-1.5 bg-slate-900 border border-slate-800 text-white rounded-xl px-2.5 py-1 whitespace-nowrap text-[10px] font-bold shadow-2xl opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity ${isSelected ? 'opacity-100 z-20' : ''}`}>
                             <p className="font-black text-amber-300">{issue.title.slice(0, 25)}...</p>
                             <p className="text-[8px] text-slate-300">{issue.category} • {issue.status}</p>
                           </div>
@@ -959,7 +959,7 @@ export default function App() {
                   </div>
 
                   {/* Satellite indicator */}
-                  <div className="absolute bottom-4 left-4 bg-slate-950/80 px-2.5 py-1 rounded-full border border-slate-850 flex items-center gap-1.5 text-[10px] font-mono text-emerald-400">
+                  <div className="absolute bottom-4 left-4 bg-slate-950/80 px-2.5 py-1 rounded-full border border-slate-900 flex items-center gap-1.5 text-[10px] font-mono text-emerald-400">
                     <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
                     <span>TELEM GRID ACTIVE</span>
                   </div>
@@ -1323,7 +1323,7 @@ export default function App() {
                           className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all ${
                             selectedIssue.upvotedBy.includes(activeUser?.id || '')
                               ? 'bg-indigo-600 text-white'
-                              : 'bg-slate-100 hover:bg-slate-200 text-indigo-850'
+                              : 'bg-slate-100 hover:bg-slate-200 text-indigo-900'
                           }`}
                         >
                           👍 {selectedIssue.upvotes} Upvotes
@@ -1447,7 +1447,7 @@ export default function App() {
                       <div className="space-y-3">
                         <div className="flex justify-between items-start">
                           <span className={`text-[9px] font-mono font-black tracking-widest uppercase border px-2 py-0.5 rounded ${
-                            ins.riskScore >= 80 ? 'bg-red-50 text-red-600 border-red-250' :
+                            ins.riskScore >= 80 ? 'bg-red-50 text-red-600 border-red-200' :
                             ins.riskScore >= 70 ? 'bg-orange-50 text-orange-600 border-orange-200' :
                             'bg-amber-50 text-amber-600 border-amber-200'
                           }`}>
@@ -1513,7 +1513,7 @@ export default function App() {
                         <div className={`w-8 h-8 rounded-full font-black font-mono text-xs flex items-center justify-center border-2 ${
                           index === 0 ? 'bg-amber-100 border-amber-400 text-amber-800' :
                           index === 1 ? 'bg-slate-150 border-slate-300 text-slate-700' :
-                          index === 2 ? 'bg-orange-100 border-orange-350 text-orange-850' :
+                          index === 2 ? 'bg-orange-100 border-orange-300 text-orange-900' :
                           'bg-white border-slate-200 text-slate-500'
                         }`}>
                           {index + 1}
@@ -1538,7 +1538,7 @@ export default function App() {
                         </div>
                         <div className="text-right">
                           <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Dynamic Points</p>
-                          <p className="font-mono text-sm font-black text-indigo-650">{profile.points} XP</p>
+                          <p className="font-mono text-sm font-black text-indigo-600">{profile.points} XP</p>
                         </div>
                       </div>
                     </div>
@@ -1555,7 +1555,7 @@ export default function App() {
 
                 <div className="space-y-4">
                   {activeUser && (
-                    <div className="bg-indigo-900/60 p-4 rounded-3xl border border-indigo-850">
+                    <div className="bg-indigo-900/60 p-4 rounded-3xl border border-indigo-900">
                       <p className="text-[10px] text-amber-400 font-mono uppercase font-bold tracking-wider mb-2.5">
                         {activeUser.name}'s Showcase
                       </p>
@@ -1579,15 +1579,15 @@ export default function App() {
                   <div className="space-y-2">
                     <p className="text-[10px] text-indigo-400 font-mono uppercase font-black">All Civic Badge Challenges</p>
                     <div className="grid grid-cols-1 gap-2 text-xs">
-                      <div className="p-2.5 bg-indigo-900/40 rounded-xl border border-indigo-850 flex items-center justify-between text-indigo-200">
+                      <div className="p-2.5 bg-indigo-900/40 rounded-xl border border-indigo-900 flex items-center justify-between text-indigo-200">
                         <span>🚀 Pothole Patrol</span>
                         <span className="text-[9px] bg-indigo-855 text-indigo-300 px-2 py-0.5 font-bold rounded-md">5 Reports</span>
                       </div>
-                      <div className="p-2.5 bg-indigo-900/40 rounded-xl border border-indigo-850 flex items-center justify-between text-indigo-200">
+                      <div className="p-2.5 bg-indigo-900/40 rounded-xl border border-indigo-900 flex items-center justify-between text-indigo-200">
                         <span>💧 Water Sentinel</span>
                         <span className="text-[9px] bg-indigo-855 text-indigo-300 px-2 py-0.5 font-bold rounded-md">8 Verifications</span>
                       </div>
-                      <div className="p-2.5 bg-indigo-900/40 rounded-xl border border-indigo-850 flex items-center justify-between text-indigo-200">
+                      <div className="p-2.5 bg-indigo-900/40 rounded-xl border border-indigo-900 flex items-center justify-between text-indigo-200">
                         <span>🌟 First Responder</span>
                         <span className="text-[9px] bg-indigo-855 text-indigo-300 px-2 py-0.5 font-bold rounded-md">First Verify</span>
                       </div>
@@ -1686,7 +1686,7 @@ export default function App() {
             {/* Modal Content Form */}
             <form onSubmit={handleCreateReport} className="flex-1 overflow-y-auto p-8 space-y-5">
               {submitError && (
-                <div className="p-3.5 bg-red-50 border border-red-250 text-red-700 text-xs font-bold rounded-2xl">
+                <div className="p-3.5 bg-red-50 border border-red-200 text-red-700 text-xs font-bold rounded-2xl">
                   ⚠️ {submitError}
                 </div>
               )}

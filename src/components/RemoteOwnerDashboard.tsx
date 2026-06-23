@@ -73,7 +73,7 @@ export default function RemoteOwnerDashboard() {
     <div className="space-y-6" id="remote_owner_dashboard">
       
       {/* Header Banner */}
-      <div className="bg-slate-900 border border-slate-850 text-white rounded-3xl p-6 relative overflow-hidden" id="remote_showcase">
+      <div className="bg-slate-900 border border-slate-900 text-white rounded-3xl p-6 relative overflow-hidden" id="remote_showcase">
         <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none"></div>
         <div className="flex items-center gap-1.5 font-mono text-amber-300 text-[10px] uppercase font-black tracking-widest leading-none mb-2">
           <Building className="w-4 h-4 text-amber-300" />
@@ -107,7 +107,7 @@ export default function RemoteOwnerDashboard() {
                   </div>
 
                   <div className="text-right">
-                    <span className="text-[8px] font-mono font-bold block text-slate-450">MONTHLY LEASE RENT</span>
+                    <span className="text-[8px] font-mono font-bold block text-slate-400">MONTHLY LEASE RENT</span>
                     <span className="text-base font-black font-mono text-indigo-95s">${t.rentAmount}</span>
                     <span className={`text-[9px] font-black uppercase font-mono px-2 py-0.5 rounded block mt-1.5 ${
                       t.rentPaidStatus === 'Paid' ? 'bg-emerald-150 text-emerald-800' : 'bg-rose-150 text-rose-800 animate-pulse'
@@ -190,7 +190,7 @@ export default function RemoteOwnerDashboard() {
             
             <button 
               onClick={handleOnboardTenantSubmit}
-              className="w-full py-2.5 bg-indigo-650 hover:bg-indigo-750 text-white rounded-xl text-xs font-black transition flex items-center justify-center gap-1.5"
+              className="w-full py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-black transition flex items-center justify-center gap-1.5"
             >
               <Plus className="w-3.5 h-3.5" />
               <span>Register Remote Tenant Checklist</span>

@@ -127,7 +127,7 @@ export default function VendorEcosystem({ vendors, issues, onUpdateIssueStatus }
                   <div className="flex justify-between items-start gap-1">
                     <div>
                       <h4 className="text-xs font-black text-indigo-950">{vendor.name}</h4>
-                      <p className="text-[9px] font-mono font-bold text-slate-450">{vendor.specialty.toUpperCase()}</p>
+                      <p className="text-[9px] font-mono font-bold text-slate-400">{vendor.specialty.toUpperCase()}</p>
                     </div>
 
                     <div className="flex items-center gap-1 bg-amber-100 text-amber-800 px-2 py-0.5 rounded-lg text-[9px] font-bold">
@@ -152,7 +152,7 @@ export default function VendorEcosystem({ vendors, issues, onUpdateIssueStatus }
 
                 <div className="pt-2 border-t flex justify-between items-center">
                   <span className={`text-[9px] font-black uppercase font-mono px-2 py-0.5 rounded ${
-                    vendor.available ? 'bg-emerald-150 text-emerald-800' : 'bg-slate-200 text-slate-450'
+                    vendor.available ? 'bg-emerald-150 text-emerald-800' : 'bg-slate-200 text-slate-400'
                   }`}>
                     {vendor.available ? "Ready" : "In Field"}
                   </span>
@@ -160,7 +160,7 @@ export default function VendorEcosystem({ vendors, issues, onUpdateIssueStatus }
                   <button
                     onClick={() => handleStartDispatch(vendor)}
                     disabled={!vendor.available || dispatchStatus !== 'idle'}
-                    className="p-1 px-4 bg-indigo-650 hover:bg-indigo-750 disabled:bg-slate-250 text-white rounded-full text-[10px] font-black transition flex items-center gap-1 shadow"
+                    className="p-1 px-4 bg-indigo-600 hover:bg-indigo-700 disabled:bg-slate-200 text-white rounded-full text-[10px] font-black transition flex items-center gap-1 shadow"
                   >
                     <span>Assign Issue</span>
                     <ChevronRight className="w-3 h-3 stroke-[3]" />
@@ -196,7 +196,7 @@ export default function VendorEcosystem({ vendors, issues, onUpdateIssueStatus }
                 {/* Stage 1 */}
                 <div className="relative">
                   <span className={`absolute -left-[25px] w-3 h-3 rounded-full border-2 ${
-                    dispatchStatus !== 'idle' ? 'bg-indigo-400 border-indigo-400' : 'bg-slate-850 border-slate-805'
+                    dispatchStatus !== 'idle' ? 'bg-indigo-400 border-indigo-400' : 'bg-slate-900 border-slate-800'
                   }`}></span>
                   <div className="text-[11px]">
                     <p className={`font-bold ${dispatchStatus !== 'idle' ? 'text-indigo-200' : 'text-slate-500'}`}>Triage Request Formed</p>
@@ -207,7 +207,7 @@ export default function VendorEcosystem({ vendors, issues, onUpdateIssueStatus }
                 {/* Stage 2 */}
                 <div className="relative">
                   <span className={`absolute -left-[25px] w-3 h-3 rounded-full border-2 ${
-                    dispatchStatus === 'transit' || dispatchStatus === 'completed' ? 'bg-amber-400 border-amber-400' : 'bg-slate-850 border-slate-805'
+                    dispatchStatus === 'transit' || dispatchStatus === 'completed' ? 'bg-amber-400 border-amber-400' : 'bg-slate-900 border-slate-800'
                   }`}></span>
                   <div className="text-[11px]">
                     <p className={`font-bold ${dispatchStatus === 'transit' || dispatchStatus === 'completed' ? 'text-amber-200' : 'text-slate-500'}`}>Transit & Lateral Isolation</p>
@@ -218,7 +218,7 @@ export default function VendorEcosystem({ vendors, issues, onUpdateIssueStatus }
                 {/* Stage 3 */}
                 <div className="relative">
                   <span className={`absolute -left-[25px] w-3 h-3 rounded-full border-2 ${
-                    dispatchStatus === 'completed' ? 'bg-emerald-450 border-emerald-450' : 'bg-slate-850 border-slate-805'
+                    dispatchStatus === 'completed' ? 'bg-emerald-400 border-emerald-400' : 'bg-slate-900 border-slate-800'
                   }`}></span>
                   <div className="text-[11px]">
                     <p className={`font-bold ${dispatchStatus === 'completed' ? 'text-emerald-300' : 'text-slate-500'}`}>Repairs Verified & Paid</p>
@@ -252,7 +252,7 @@ export default function VendorEcosystem({ vendors, issues, onUpdateIssueStatus }
                       onClick={() => setIsPaid(true)}
                       disabled={isPaid}
                       className={`w-full py-2 rounded-lg text-[10px] font-black tracking-wider transition uppercase ${
-                        isPaid ? 'bg-emerald-600 text-white' : 'bg-indigo-650 hover:bg-indigo-750 text-white'
+                        isPaid ? 'bg-emerald-600 text-white' : 'bg-indigo-600 hover:bg-indigo-700 text-white'
                       }`}
                     >
                       {isPaid ? "✓ Pay Completed via App Wallet" : "Trigger Secure ESCROW App pay"}
@@ -281,7 +281,7 @@ export default function VendorEcosystem({ vendors, issues, onUpdateIssueStatus }
               </div>
             </div>
           ) : (
-            <div className="py-12 text-center text-slate-450 italic text-[11px] border border-dashed border-slate-800 rounded-3xl">
+            <div className="py-12 text-center text-slate-400 italic text-[11px] border border-dashed border-slate-800 rounded-3xl">
               No active contractor dispatch tracked. Find the category and click **"Assign Issue"** on any plumber/electrician to start local repairs.
             </div>
           )}

@@ -136,7 +136,7 @@ export default function SmallSocietyExcelWhatsApp() {
           {/* Interactive list */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3 max-h-72 overflow-y-auto pr-1">
             {units.map((u) => (
-              <div key={u.flatNum} className="p-3 bg-slate-50 border rounded-2xl flex items-center justify-between hover:border-slate-350 transition">
+              <div key={u.flatNum} className="p-3 bg-slate-50 border rounded-2xl flex items-center justify-between hover:border-slate-300 transition">
                 <div>
                   <h4 className="text-xs font-black text-indigo-950">{u.flatNum}</h4>
                   <p className="text-[10px] font-medium text-slate-500">{u.residentName}</p>
@@ -144,12 +144,12 @@ export default function SmallSocietyExcelWhatsApp() {
 
                 <div className="flex items-center gap-2 text-right">
                   <div>
-                    <span className="text-[8px] font-mono font-bold block text-slate-450">PENDING DUES</span>
+                    <span className="text-[8px] font-mono font-bold block text-slate-400">PENDING DUES</span>
                     <span className="text-xs font-bold font-mono text-indigo-950">${u.outstandingDues}</span>
                   </div>
                   <button 
                     onClick={() => handleDeleteFlat(u.flatNum)}
-                    className="p-1 text-slate-400 hover:text-red-650 transition"
+                    className="p-1 text-slate-400 hover:text-red-600 transition"
                   >
                     <Trash className="w-3.5 h-3.5" />
                   </button>
@@ -160,7 +160,7 @@ export default function SmallSocietyExcelWhatsApp() {
 
           {/* Add Unit form */}
           <div className="bg-slate-50/50 p-4 rounded-3xl space-y-3.5 border border-dashed">
-            <span className="text-[9px] font-black uppercase text-indigo-650 tracking-wider block">Add Flat Structure Manual</span>
+            <span className="text-[9px] font-black uppercase text-indigo-600 tracking-wider block">Add Flat Structure Manual</span>
             <div className="grid grid-cols-3 gap-2">
               <input 
                 type="text" 
@@ -230,7 +230,7 @@ export default function SmallSocietyExcelWhatsApp() {
           <div className="flex items-center gap-2.5 pb-2 border-b">
             <MessageSquare className="w-5 h-5 text-emerald-500 animate-bounce" />
             <div>
-              <span className="text-[9px] font-black uppercase text-emerald-650 block">COMMUNICATOR OUTLET</span>
+              <span className="text-[9px] font-black uppercase text-emerald-600 block">COMMUNICATOR OUTLET</span>
               <h3 className="text-xs font-black font-display text-indigo-950">Group WhatsApp Broadcaster Notice</h3>
             </div>
           </div>
@@ -246,7 +246,7 @@ export default function SmallSocietyExcelWhatsApp() {
           <div className="grid grid-cols-2 gap-2 text-xs pt-1">
             <button
               onClick={copyToClipboard}
-              className="py-2.5 bg-emerald-650 hover:bg-emerald-700 text-white rounded-xl font-black transition flex items-center justify-center gap-1.5 shadow"
+              className="py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl font-black transition flex items-center justify-center gap-1.5 shadow"
             >
               <Copy className="w-3.5 h-3.5" />
               <span>Copy for WhatsApp</span>
@@ -256,7 +256,7 @@ export default function SmallSocietyExcelWhatsApp() {
               href={`https://api.whatsapp.com/send?text=${encodeURIComponent(getWhatsAppMessageLayout())}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="py-2.5 border border-slate-350 hover:bg-slate-50 text-slate-700 rounded-xl font-bold transition flex items-center justify-center gap-1"
+              className="py-2.5 border border-slate-300 hover:bg-slate-50 text-slate-700 rounded-xl font-bold transition flex items-center justify-center gap-1"
             >
               <Share2 className="w-3.5 h-3.5" />
               <span>Open web.whatsapp</span>

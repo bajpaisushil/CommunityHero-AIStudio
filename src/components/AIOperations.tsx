@@ -99,7 +99,7 @@ export default function AIOperations({ issues }: AIOperationsProps) {
             <div className="space-y-1">
               <div className="flex justify-between text-[11px] font-bold">
                 <span className="text-slate-600">Simulated Temperature (°C)</span>
-                <span className="text-cyan-750 font-mono font-black">{tempMultiplier}°C</span>
+                <span className="text-cyan-700 font-mono font-black">{tempMultiplier}°C</span>
               </div>
               <input 
                 type="range" 
@@ -180,7 +180,7 @@ export default function AIOperations({ issues }: AIOperationsProps) {
                 </div>
 
                 <div className="flex gap-2.5 text-xs text-red-900 leading-snug items-start">
-                  <AlertTriangle className="w-5 h-5 text-red-650 shrink-0 mt-0.5" />
+                  <AlertTriangle className="w-5 h-5 text-red-600 shrink-0 mt-0.5" />
                   <div>
                     <strong className="text-red-950 block">Anomaly Detected under Flat 302:</strong>
                     <span className="text-[11px] text-red-800">
@@ -193,7 +193,7 @@ export default function AIOperations({ issues }: AIOperationsProps) {
                   <button
                     type="button"
                     onClick={() => setAnomalyStatus(false)}
-                    className="p-1 px-3.5 bg-red-750 text-white rounded-full text-[10px] font-black hover:bg-red-800 transition shadow"
+                    className="p-1 px-3.5 bg-red-700 text-white rounded-full text-[10px] font-black hover:bg-red-800 transition shadow"
                   >
                     Mute Alert
                   </button>
@@ -216,7 +216,7 @@ export default function AIOperations({ issues }: AIOperationsProps) {
                 <FileText className="w-5 h-5" />
               </div>
               <div>
-                <span className="text-[9px] font-black uppercase text-indigo-650 block">GOVERNANCE ENGINE</span>
+                <span className="text-[9px] font-black uppercase text-indigo-600 block">GOVERNANCE ENGINE</span>
                 <h3 className="text-xs font-black font-display text-indigo-950">Automated Committee Report Generator</h3>
               </div>
             </div>
@@ -233,7 +233,7 @@ export default function AIOperations({ issues }: AIOperationsProps) {
 
           {reportMarkdown ? (
             <div className="space-y-3">
-              <div className="bg-slate-50 border border-slate-205 rounded-xl p-4 font-mono text-[10px] leading-relaxed text-slate-700 whitespace-pre-wrap max-h-56 overflow-y-auto">
+              <div className="bg-slate-50 border border-slate-200 rounded-xl p-4 font-mono text-[10px] leading-relaxed text-slate-700 whitespace-pre-wrap max-h-56 overflow-y-auto">
                 {reportMarkdown}
               </div>
               <div className="flex justify-end gap-2 text-xs">
@@ -243,7 +243,7 @@ export default function AIOperations({ issues }: AIOperationsProps) {
                     navigator.clipboard.writeText(reportMarkdown);
                     alert("Report markdown copied to clipboard!");
                   }}
-                  className="px-4 py-1.5 border border-slate-350 hover:bg-slate-100 rounded-full font-bold"
+                  className="px-4 py-1.5 border border-slate-300 hover:bg-slate-100 rounded-full font-bold"
                 >
                   Copy Text
                 </button>

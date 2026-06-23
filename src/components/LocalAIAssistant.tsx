@@ -188,7 +188,7 @@ export default function LocalAIAssistant({ activeUser }: LocalAIAssistantProps) 
           className={`flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-[10px] font-bold border transition ${
             speechActive 
               ? 'bg-amber-400 border-amber-300 text-indigo-950 shadow'
-              : 'bg-indigo-900 border-indigo-850 text-indigo-200'
+              : 'bg-indigo-900 border-indigo-900 text-indigo-200'
           }`}
         >
           {speechActive ? <Mic className="w-3 h-3" /> : <MicOff className="w-3 h-3" />}
@@ -240,7 +240,7 @@ export default function LocalAIAssistant({ activeUser }: LocalAIAssistantProps) 
 
         {loading && (
           <div className="flex items-center gap-2 max-w-[85%]">
-            <div className="p-2 rounded-full bg-amber-450 text-indigo-950 animate-bounce">
+            <div className="p-2 rounded-full bg-amber-400 text-indigo-950 animate-bounce">
               <Bot className="w-3.5 h-3.5" />
             </div>
             <div className="p-3 bg-white border border-slate-100 rounded-2xl text-[11px] text-slate-500 font-mono flex items-center gap-1">
@@ -283,11 +283,11 @@ export default function LocalAIAssistant({ activeUser }: LocalAIAssistantProps) 
             value={inputVal}
             onChange={(e) => setInputVal(e.target.value)}
             placeholder="Type your budget/energy query here..."
-            className="flex-1 bg-slate-50 border border-slate-250 p-2.5 rounded-xl text-xs outline-none focus:border-indigo-500 text-slate-800 font-semibold"
+            className="flex-1 bg-slate-50 border border-slate-200 p-2.5 rounded-xl text-xs outline-none focus:border-indigo-500 text-slate-800 font-semibold"
           />
           <button 
             type="submit"
-            className="bg-indigo-650 text-white p-2.5 rounded-xl hover:bg-indigo-700 transition"
+            className="bg-indigo-600 text-white p-2.5 rounded-xl hover:bg-indigo-700 transition"
           >
             <Send className="w-4 h-4" />
           </button>

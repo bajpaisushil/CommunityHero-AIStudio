@@ -85,7 +85,7 @@ export default function ResidentEngagement() {
       
       {/* Header Banner */}
       <div className="bg-indigo-900 text-white rounded-3xl p-6 relative overflow-hidden" id="engagement_showcase">
-        <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-850/50 rounded-full blur-3xl pointer-events-none"></div>
+        <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-900/50 rounded-full blur-3xl pointer-events-none"></div>
         <div className="flex items-center gap-1.5 font-mono text-amber-300 text-[10px] uppercase font-black tracking-widest leading-none mb-2">
           <HeartHandshake className="w-4 h-4 text-amber-300" />
           <span>Gap 6: Hyperlocal Engagement Hub & Marketplace</span>
@@ -105,7 +105,7 @@ export default function ResidentEngagement() {
             onClick={() => setActiveSubTab('skills')}
             className={`flex items-center gap-2 px-4 py-2.5 rounded-full text-xs font-black transition whitespace-nowrap ${
               activeSubTab === 'skills'
-                ? 'bg-indigo-650 text-white shadow'
+                ? 'bg-indigo-600 text-white shadow'
                 : 'text-slate-500 hover:bg-slate-100 hover:text-slate-800'
             }`}
           >
@@ -117,7 +117,7 @@ export default function ResidentEngagement() {
             onClick={() => setActiveSubTab('market')}
             className={`flex items-center gap-2 px-4 py-2.5 rounded-full text-xs font-black transition whitespace-nowrap ${
               activeSubTab === 'market'
-                ? 'bg-indigo-650 text-white shadow'
+                ? 'bg-indigo-600 text-white shadow'
                 : 'text-slate-500 hover:bg-slate-100 hover:text-slate-800'
             }`}
           >
@@ -129,7 +129,7 @@ export default function ResidentEngagement() {
             onClick={() => setActiveSubTab('helpers')}
             className={`flex items-center gap-2 px-4 py-2.5 rounded-full text-xs font-black transition whitespace-nowrap ${
               activeSubTab === 'helpers'
-                ? 'bg-indigo-650 text-white shadow'
+                ? 'bg-indigo-600 text-white shadow'
                 : 'text-slate-500 hover:bg-slate-100 hover:text-slate-800'
             }`}
           >
@@ -141,7 +141,7 @@ export default function ResidentEngagement() {
             onClick={() => setActiveSubTab('carpool')}
             className={`flex items-center gap-2 px-4 py-2.5 rounded-full text-xs font-black transition whitespace-nowrap ${
               activeSubTab === 'carpool'
-                ? 'bg-indigo-650 text-white shadow'
+                ? 'bg-indigo-600 text-white shadow'
                 : 'text-slate-500 hover:bg-slate-100 hover:text-slate-800'
             }`}
           >
@@ -229,7 +229,7 @@ export default function ResidentEngagement() {
 
                 <button 
                   onClick={handleAddSkill}
-                  className="w-full py-2.5 bg-indigo-650 hover:bg-indigo-750 text-white rounded-xl text-xs font-black transition shadow"
+                  className="w-full py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-black transition shadow"
                 >
                   Publish Skill Offer
                 </button>
@@ -257,7 +257,7 @@ export default function ResidentEngagement() {
 
                     <div className="pt-3.5 border-t border-slate-150 flex items-center justify-between">
                       <span className="text-sm font-black font-mono text-emerald-800">${it.price}</span>
-                      <button className="text-[10px] font-black bg-indigo-600 text-white px-3.5 py-1.5 rounded-full hover:bg-indigo-750 transition flex items-center gap-1">
+                      <button className="text-[10px] font-black bg-indigo-600 text-white px-3.5 py-1.5 rounded-full hover:bg-indigo-700 transition flex items-center gap-1">
                         <MessageCircle className="w-3 h-3" />
                         <span>Inquire Seller</span>
                       </button>
@@ -322,7 +322,7 @@ export default function ResidentEngagement() {
 
                 <button 
                   onClick={handleAddMarket}
-                  className="w-full py-2.5 bg-indigo-650 hover:bg-indigo-750 text-white rounded-xl text-xs font-black transition shadow"
+                  className="w-full py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-black transition shadow"
                 >
                   List Item For Sale
                 </button>
@@ -351,7 +351,7 @@ export default function ResidentEngagement() {
 
                     <p className="text-[11px] text-slate-500 italic">"{hlp.recommendationQuote}"</p>
 
-                    <div className="grid grid-cols-2 gap-2 text-[10px] text-slate-450 font-bold border-t pt-2 mt-2">
+                    <div className="grid grid-cols-2 gap-2 text-[10px] text-slate-400 font-bold border-t pt-2 mt-2">
                       <div>
                         <span>Working structure flats:</span>
                         <div className="flex gap-1 flex-wrap mt-0.5">
@@ -388,9 +388,9 @@ export default function ResidentEngagement() {
                   </div>
 
                   <div className="text-right flex flex-col justify-between items-end h-full">
-                    <span className="text-[9px] font-mono font-bold text-slate-450">AVAILABLE SEATS</span>
+                    <span className="text-[9px] font-mono font-bold text-slate-400">AVAILABLE SEATS</span>
                     <p className="text-2xl font-display font-black text-indigo-955">{cp.seatCount}</p>
-                    <button className="px-3 py-1 bg-indigo-600 text-white rounded-full text-[10px] font-black hover:bg-indigo-750 transition mt-2">
+                    <button className="px-3 py-1 bg-indigo-600 text-white rounded-full text-[10px] font-black hover:bg-indigo-700 transition mt-2">
                       Book Seat
                     </button>
                   </div>

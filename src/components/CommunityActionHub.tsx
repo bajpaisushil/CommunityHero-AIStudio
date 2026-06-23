@@ -100,7 +100,7 @@ export default function CommunityActionHub({
             <div className="flex items-start gap-1.5 leading-snug">
               <Radio className="w-3.5 h-3.5 text-cyan-400 mt-0.5 shrink-0" />
               <p className="font-semibold text-cyan-100/90 text-[11px]">
-                <strong className="text-cyan-350">Leak Signature:</strong> {acousticFeedback.type}
+                <strong className="text-cyan-300">Leak Signature:</strong> {acousticFeedback.type}
               </p>
             </div>
             <div className="p-2.5 rounded-xl bg-cyan-900/50 border border-cyan-800/20 text-[10px] leading-relaxed text-cyan-300">
@@ -148,7 +148,7 @@ export default function CommunityActionHub({
           <div className="space-y-1 bg-white p-3 rounded-2xl border border-indigo-50">
             <div className="flex justify-between text-[11px] mb-1">
               <span className="text-slate-500">Volunteer Hours Target</span>
-              <span className="text-indigo-650 font-bold font-mono">{totalLaborHours} / {laborTarget} Hrs</span>
+              <span className="text-indigo-600 font-bold font-mono">{totalLaborHours} / {laborTarget} Hrs</span>
             </div>
             <div className="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
               <div 
@@ -162,7 +162,7 @@ export default function CommunityActionHub({
           <div className="space-y-1 bg-white p-3 rounded-2xl border border-indigo-50">
             <div className="flex justify-between text-[11px] mb-1">
               <span className="text-slate-500">Safety Assets Target</span>
-              <span className="text-indigo-650 font-bold font-mono">{totalPhysicalResources} / {materialTarget} units</span>
+              <span className="text-indigo-600 font-bold font-mono">{totalPhysicalResources} / {materialTarget} units</span>
             </div>
             <div className="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
               <div 
@@ -191,7 +191,7 @@ export default function CommunityActionHub({
                     <span className="font-bold text-slate-800">{p.name}</span>
                     <span className="text-slate-400 font-medium font-mono text-[10px]">{new Date(p.createdAt).toLocaleDateString()}</span>
                   </div>
-                  <span className="font-mono bg-indigo-50 text-indigo-750 border border-indigo-100/40 px-2 py-0.5 rounded font-black">
+                  <span className="font-mono bg-indigo-50 text-indigo-700 border border-indigo-100/40 px-2 py-0.5 rounded font-black">
                     +{p.quantity} {p.resourceType}
                   </span>
                 </div>

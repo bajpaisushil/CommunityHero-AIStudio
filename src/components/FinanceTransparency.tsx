@@ -231,14 +231,14 @@ export default function FinanceTransparency({ records, activeUser, onAddRecord }
         {/* Invoice OCR Reader column */}
         <div className="lg:col-span-4 bg-white border border-slate-100 rounded-[2.5rem] p-6 shadow-xl space-y-5">
           <div className="space-y-1">
-            <span className="text-[9px] font-black uppercase text-indigo-650 font-mono block">GAP 4: INVOICE OCR CONSOLE</span>
+            <span className="text-[9px] font-black uppercase text-indigo-600 font-mono block">GAP 4: INVOICE OCR CONSOLE</span>
             <h3 className="text-xs font-black font-display text-indigo-950">Immediate Invoice OCR Extractor</h3>
             <p className="text-[10px] text-slate-500 leading-relaxed">
               Upload/snap any municipal contractor invoice or repair receipt. Our server-side Gemini Vision algorithm will read compliance figures and update the live treasury ledger.
             </p>
           </div>
 
-          <div className="bg-slate-50 border-2 border-dashed border-slate-250 rounded-[2rem] p-5 text-center flex flex-col items-center justify-center relative cursor-pointer hover:bg-slate-100/50 transition duration-205">
+          <div className="bg-slate-50 border-2 border-dashed border-slate-200 rounded-[2rem] p-5 text-center flex flex-col items-center justify-center relative cursor-pointer hover:bg-slate-100/50 transition duration-205">
             <input 
               type="file" 
               accept="image/*"
@@ -252,7 +252,7 @@ export default function FinanceTransparency({ records, activeUser, onAddRecord }
               </div>
             ) : (
               <div className="space-y-2">
-                <UploadCloud className="w-8 h-8 text-slate-450 mx-auto" />
+                <UploadCloud className="w-8 h-8 text-slate-400 mx-auto" />
                 <div>
                   <span className="text-xs font-bold text-slate-700 block">Click or Drag invoice image</span>
                   <p className="text-[9px] text-slate-400 font-medium">JPEG, PNG receipt or voucher format</p>
